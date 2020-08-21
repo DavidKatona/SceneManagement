@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneB.unity
     guid: ad86c85c3b0388a4181d3a96542807aa
+  - enabled: 1
+    path: Assets/Scenes/AdditiveSceneManagement/GameScene.unity
+    guid: 4cf5aa08b514f824d8fa00cabfabbc49
+  - enabled: 1
+    path: Assets/Scenes/AdditiveSceneManagement/PlayerScene.unity
+    guid: 20dc3de07827d204a8fa5e8e0cb58a9f
+  - enabled: 1
+    path: Assets/Scenes/AdditiveSceneManagement/Level01_Deck.unity
+    guid: 47543cc52e6d6d748a4147921fdb5c48
+  - enabled: 1
+    path: Assets/Scenes/AdditiveSceneManagement/Level02_Engineering.unity
+    guid: 7808741d27e728348bdb86d029acbdb9
   m_configObjects: {}

@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
 
         Load("PlayerScene");
         Load("Level01_Deck");
-        //Load("Level02_Engineering");
     }
     
     public void Load(string sceneName)

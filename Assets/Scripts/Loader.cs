@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public static class Loader
 {
-    // Just a dummy class on which implements MonoBehaviour.
+    // Just a dummy class which implements MonoBehaviour.
     private class LoadingMonoBehaviour : MonoBehaviour { }
 
     public enum Scene

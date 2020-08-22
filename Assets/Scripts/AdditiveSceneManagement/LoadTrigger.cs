@@ -8,6 +8,8 @@ public class LoadTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag != "Player") return;
+
         if (!string.IsNullOrWhiteSpace(_sceneToLoad))
         {
             StartCoroutine(LoadScene());

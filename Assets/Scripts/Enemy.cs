@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _navMeshAgent.SetDestination(_target.transform.position);
+        if (_target != null)
+        {
+            _navMeshAgent.SetDestination(_target.transform.position);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadTrigger : MonoBehaviour
 {
@@ -10,12 +11,12 @@ public class LoadTrigger : MonoBehaviour
     {
         if (other.tag != "Player") return;
 
-        if (!string.IsNullOrWhiteSpace(_sceneToLoad))
+        if (!string.IsNullOrWhiteSpace(_sceneToLoad) && !SceneManager.GetSceneByName(_sceneToLoad).isLoaded)
         {
             StartCoroutine(LoadScene());
         }
 
-        if (!string.IsNullOrWhiteSpace(_sceneToUnload))
+        if (!string.IsNullOrWhiteSpace(_sceneToUnload) && SceneManager.GetSceneByName(_sceneToUnload).isLoaded)
         {
             StartCoroutine(UnloadScene());
         }

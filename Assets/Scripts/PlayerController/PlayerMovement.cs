@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
         float verticalModifier = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = transform.right * horizontalModifier + transform.forward * verticalModifier;
+
+        // We clamp the magnitude of the moveDirection vector, so walking diagonally doesn't result in a larger movement vector.
+        moveDirection = Vector3.ClampMagnitude(moveDirection, 1);
         _characterController.Move(moveDirection * movementSpeedModifier * Time.deltaTime);
 
         // Apply gravity to our character.

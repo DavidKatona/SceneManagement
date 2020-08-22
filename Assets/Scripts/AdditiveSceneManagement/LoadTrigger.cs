@@ -11,13 +11,19 @@ public class LoadTrigger : MonoBehaviour
     {
         if (!string.IsNullOrWhiteSpace(_sceneToLoad))
         {
-            GameManager.Instance.Load(_sceneToLoad);
+            StartCoroutine(LoadScene());
         }
 
         if (!string.IsNullOrWhiteSpace(_sceneToUnload))
         {
             StartCoroutine(UnloadScene());
         }
+    }
+
+    private IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(0.1f);
+        GameManager.Instance.Load(_sceneToLoad);
     }
 
     private IEnumerator UnloadScene()
